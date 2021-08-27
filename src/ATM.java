@@ -1,6 +1,13 @@
-
+import java.util.*;
 public class ATM {
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
+	
+	static HashMap<String, Integer> map = new HashMap<String, Integer>();
+	
+	public void deposit(String bankAccountID, int amount) {
+		if(!map.containsKey(bankAccountID)) {
+			map.put(bankAccountID, amount);
+		}else {
+			map.put(bankAccountID, map.get(bankAccountID) + amount);
+		}
 	}
 }
