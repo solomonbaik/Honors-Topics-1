@@ -1,7 +1,7 @@
 import java.util.*;
 public class ATM {
 	
-	static HashMap<String, Integer> map = new HashMap<String, Integer>();
+	private static HashMap<String, Integer> map = new HashMap<String, Integer>();
 	
 	public void deposit(String bankAccountID, int amount) {
 		if(!map.containsKey(bankAccountID)) {
