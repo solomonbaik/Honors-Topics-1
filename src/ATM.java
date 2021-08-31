@@ -11,5 +11,18 @@ public class ATM {
 		}
 	}
 	
-	
+	public void withdrawl (String bankAccountID, int amount) throws Exception
+	{
+		if (!map.containsKey(bankAccountID))
+		{
+			throw new Exception ();
+		}
+		else
+		{
+			if (amount <= map.get(bankAccountID))
+			{
+				map.put(bankAccountID, map.get(bankAccountID)-amount);
+			}
+		}
+	}
 }
