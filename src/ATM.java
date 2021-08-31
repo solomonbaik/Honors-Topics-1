@@ -1,9 +1,9 @@
 import java.util.*;
 public class ATM {
 	
-	private static HashMap<String, Integer> map = new HashMap<String, Integer>();
+	private static HashMap<String, Double> map = new HashMap<String, Double>();
 	
-	public void deposit(String bankAccountID, int amount) {
+	public void deposit(String bankAccountID, double amount) {
 		if(!map.containsKey(bankAccountID)) {
 			map.put(bankAccountID, amount);
 		}else {
@@ -11,7 +11,7 @@ public class ATM {
 		}
 	}
 	
-	public void withdraw (String bankAccountID, int amount) throws Exception
+	public void withdraw (String bankAccountID, double amount) throws Exception
 	{
 		if (!map.containsKey(bankAccountID))
 		{
