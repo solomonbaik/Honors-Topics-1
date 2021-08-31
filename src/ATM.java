@@ -11,7 +11,7 @@ public class ATM {
 		}
 	}
 	
-	public void withdrawl (String bankAccountID, int amount) throws Exception
+	public void withdraw (String bankAccountID, int amount) throws Exception
 	{
 		if (!map.containsKey(bankAccountID))
 		{
@@ -23,6 +23,18 @@ public class ATM {
 			{
 				map.put(bankAccountID, map.get(bankAccountID)-amount);
 			}
+		}
+	}
+	
+	public String checkBalance (String bankAccountID) throws Exception
+	{
+		if (!map.containsKey(bankAccountID))
+		{
+			throw new Exception ();
+		}
+		else
+		{
+			return ("" + map.get(bankAccountID));
 		}
 	}
 }
