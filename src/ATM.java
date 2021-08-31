@@ -10,4 +10,5 @@ public class ATM {
 			map.put(bankAccountID, map.get(bankAccountID) + amount);
 		}
 	}
+	
 }
