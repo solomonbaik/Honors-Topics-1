@@ -1,8 +1,8 @@
 import java.util.*;
 public class ATM {
-	
+
 	private static HashMap<String, Double> map = new HashMap<String, Double>();
-	
+
 	public void deposit(String bankAccountID, double amount) {
 		if(!map.containsKey(bankAccountID)) {
 			map.put(bankAccountID, amount);
@@ -10,7 +10,7 @@ public class ATM {
 			map.put(bankAccountID, map.get(bankAccountID) + amount);
 		}
 	}
-	
+
 	public void withdraw (String bankAccountID, double amount) throws Exception
 	{
 		if (!map.containsKey(bankAccountID))
@@ -25,7 +25,7 @@ public class ATM {
 			}
 		}
 	}
-	
+
 	public String checkBalance (String bankAccountID) throws Exception
 	{
 		if (!map.containsKey(bankAccountID))
@@ -37,4 +37,15 @@ public class ATM {
 			return ("" + map.get(bankAccountID));
 		}
 	}
+
+	public String toString ()
+	{
+		String s = "";
+		for(HashMap.Entry<String,Double> account: map.entrySet())
+		{
+			s = s + account.getKey() + ": $" + account.getValue() + "\n";
+		}
+		return s;
+	}
 }
+

@@ -12,7 +12,9 @@ public class ATMTester {
 		
 		test.checkBalance("Bezos");
 		test.checkBalance("Winfrey");
-		test.checkBalance("YoMama");
-		test.checkBalance("MrTheiss");
+		//test.checkBalance("YoMama");
+		//test.checkBalance("MrTheiss");
+		
+		System.out.println (test.toString ());
 	}
 }
